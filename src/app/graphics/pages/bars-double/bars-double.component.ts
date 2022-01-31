@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 
 @Component({
   selector: 'app-bars-double',
@@ -6,11 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class BarsDoubleComponent implements OnInit {
+export class BarsDoubleComponent {
 
-  constructor() { }
+  providersData:ChartData<'bar'>= {
+    labels: [ '2022', '2023', '2024', '2025', '2026', '2027', '2028' ],
+    datasets:[
+      { data: [100,300,400,300,100], label: 'Vehicule',backgroundColor: 'blue'}
 
-  ngOnInit(): void {
-  }
+    ]
+  };
+  providersLabels: string[] = ['2021', '2022','2023','2024','2025'];
 
+  public barChartType: ChartType = 'bar';
+  public barChartData: ChartData<'bar'> = {
+    labels: [ '2022', '2023', '2024', '2025', '2026', '2027', '2028' ],
+    datasets: [
+      { data: [100,200,300,400,500], label: 'Seller A'},
+       { data: [50,250,30,450,200], label: 'Seller B'},
+    ],
+    
+  };
+ 
 }

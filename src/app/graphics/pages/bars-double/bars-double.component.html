@@ -1,1 +1,19 @@
-<p>bars-double works!</p>
+
+
+<h1>Doubles graphic</h1>
+<hr>
+<div class="row">
+    <div class="col-md-6">
+        <app-graphic-bar [horizontal]="true"
+                         [barChartData]="barChartData"
+        ><!--  [barChartData]="providersData"-->
+        </app-graphic-bar >
+    </div>
+
+    <div class="col-md-6">
+        <app-graphic-bar  
+        [barChartData]="barChartData"        >
+        </app-graphic-bar >
+    </div>
+</div>
+

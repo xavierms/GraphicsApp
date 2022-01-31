@@ -1,1 +1,24 @@
-<p>doughnut-chart works!</p>
+<h1>Proporción en ventas</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <div style="display: block">
+            <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [options]="pieChartOptions"
+            >
+            </canvas>
+        </div>
+
+    </div>
+</div>
+<div class="button-row">
+    <button  class="btn btn-primary "   (click)="toggleLegend()">Toggle Legend</button>
+    <button  class="btn btn-primary "  color="primary" (click)="changeLabels()">Change Labels</button>
+    <button  class="btn btn-primary "  color="primary" (click)="addSlice()">Add Slice</button>
+    <button  class="btn btn-primary "  color="primary" (click)="removeSlice()">Remove Slice</button>
+    <button  class="btn btn-primary "  color="primary" (click)="changeLegendPosition()">Change Legend Position</button>
+  </div>

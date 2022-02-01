@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from "@angular/common/http";
 import { NgChartsModule } from 'ng2-charts';
 
 import { GraphicsRoutingModule } from './graphics-routing.module';
@@ -21,7 +21,8 @@ import { DoughnutHttpComponent } from './pages/doughnut-http/doughnut-http.compo
   imports: [
     CommonModule,
     GraphicsRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    HttpClientModule
   ]
 })
 export class GraphicsModule { }
